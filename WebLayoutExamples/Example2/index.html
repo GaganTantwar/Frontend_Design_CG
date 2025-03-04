@@ -1,0 +1,54 @@
+<!doctype html> <!-- Defines the document type as HTML5 -->
+<title>Example2</title> <!-- The title of the document, which will appear in the browser's title bar -->
+
+<style>
+  * {
+    box-sizing: border-box;  /*Ensures padding and border are included in the element's total width and height */
+  }
+  body {
+    display: flex; /*Uses Flexbox layout */
+    min-height: 100vh; /*Sets the minimum height to 100% of the viewport height */
+    flex-direction: row; /* Arranges child elements in a row */
+    margin: 0; /* Removes default margin from the body */
+  }
+  .col-1 {
+    background: #b2d7ab; /* Sets background color */
+    flex: 1; /*Flex property allows it to grow and shrink */
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column; /* Arranges child elements in a column */
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 3; /*The article will take up 3 parts of the available space*/
+    min-height: 60vh; /* Sets the minimum height to 60% of the viewport height */
+  }
+  .content > aside {
+    background: rgb(238, 238, 201); /* Sets background color */
+    flex: 1; /* The aside will take up 1 part of the available space */
+  }
+  header, footer {
+    background: rgb(174, 222, 79); /* Sets background color */
+    height: 20vh; /*Sets the height to 20% of the viewport height */
+  }
+  header, footer, article, nav, aside {
+    padding: 1em; /*Adds padding to these elements */
+  }
+</style>
+
+<body>
+  <nav class="col-1">Nav</nav> <!-- Navigation area, styled with class "col-1" -->
+  <div class="col-2">
+    <header>Header</header> <!-- Header area, styled with default styling in class "col-2" -->
+    <main class="content">
+    <article>Article</article> <!-- Main article content area, styled in "content" class -->
+    <aside>Aside</aside> <!-- Sidebar area, styled in "content" class -->
+    </main>
+    <footer>Footer</footer> <!-- Footer area, styled with default styling in class "col-2" -->
+  </div>
+</body>

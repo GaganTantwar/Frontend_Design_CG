@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- Defines the document type and version of HTML -->
+
+<title>Holy Grail Layout 1 Example</title>
+<!-- Sets the title of the document -->
+
+<style>
+  * {
+   box-sizing: border-box; 
+   /* Ensures padding and borders are included in the element's total width and height */
+  }
+  
+  body {
+    margin: 0; /* Removes default margin for full-width layout */
+  }
+
+  #main {
+    display: flex; /* Enables flexbox for layout management */
+    min-height: calc(100vh - 40vh); 
+    /* Ensures main section fills remaining height after header and footer */
+  }
+
+  #main > article {
+    flex: 1; /* Allows the article section to take up the remaining flexible space */
+  }
+
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw; /* Fixes nav and aside to 20% of the viewport width */
+    background: rgb(212, 212, 187); /* Light background for contrast */
+  }
+
+  #main > nav {
+    order: -1; /* Moves the nav to the beginning in the flex order */
+  }
+
+  header, footer, article, nav, aside {
+    padding: 1em; /* Adds padding for spacing */
+  }
+
+  header, footer {
+    background: rgb(105, 161, 213); /* Blue background for header and footer */
+    height: 20vh; /* Sets a fixed height of 20% of the viewport */
+  }
+</style>
+
+<body>
+  <!-- Header Section -->
+  <header>Header</header>
+
+  <!-- Main Content Section -->
+  <div id="main">
+    <article>Article</article> <!-- Main content area -->
+    <nav>Nav</nav> <!-- Navigation bar -->
+    <aside>Aside</aside> <!-- Sidebar content -->
+  </div>
+
+  <!-- Footer Section -->
+  <footer>Footer</footer>
+</body>

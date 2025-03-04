@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- Defines the document type and version of HTML -->
+
+<title>Example4</title>
+<!-- Sets the title of the document -->
+
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  /* Ensures padding and border are included in the total width and height of elements */
+
+  body {
+    display: flex;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .outer-col-1 {
+    background: #9bd890; /* Light green background */
+    flex: 1; /* Takes up 1 portion of available space */
+  }
+
+  .outer-col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5; /* Takes up 5 portions of available space */
+  }
+
+  .inner-row {
+    display: flex;
+    flex-direction: row; /* Aligns children (article and aside) in a row */
+  }
+
+  .inner-col {
+    flex: 4; /* Makes article take up most of the row */
+  }
+
+  .inner-row article {
+    min-height: 60vh; /* Ensures article has a minimum height */
+  }
+
+  .inner-row aside {
+    background: rgb(151, 151, 60); /* Yellowish background */
+    flex: 1; /* Aside takes up less space compared to the article */
+  }
+
+  header, footer {
+    background: yellowgreen;
+    height: 20vh; /* Gives consistent height for header and footer */
+  }
+
+  header, footer, article, nav, aside {
+    padding: 1em; /* Provides spacing inside elements */
+  }
+</style>
+
+<body>
+  <!-- Navigation Section -->
+  <nav class="outer-col-1">Nav</nav>
+
+  <!-- Main Content Wrapper -->
+  <div class="outer-col-2">
+  	<header>Header</header>
+    <!-- Flexbox Layout with Article and Aside -->
+    <div class="inner-row">
+      <div class="inner-col">
+    	<article>Article</article>
+  		<footer>Footer</footer>
+      </div>
+      <aside>Aside</aside>
+    </div>
+  </div>
+</body>

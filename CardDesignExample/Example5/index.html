@@ -1,0 +1,84 @@
+<!doctype html>
+<title>Card Design Example Double Width Card</title>
+<style>
+  * {
+   box-sizing: border-box;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .card {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  } 
+  .card img {
+    max-width: 100%;
+  }
+  .card .text {
+    padding: 0 20px 20px;
+  }
+  .card .text > button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    }
+  .card:nth-child(1) {
+    width: 420px;
+  }
+</style>
+<main class="cards">
+  <article class="card">
+    <img src="/Sample/ComputerScienceimage.jpg" alt="Sample photo">
+    <div class="text">
+      <h3>Computer Science</h3>
+      <p>Computer Science is a branch of Science that is used to create program on high level language for performing sepecific task </p>
+      <button>CSE</button>
+    </div>
+  </article>
+  <article class="card">
+    <img src="/Sample/AIimage.jpg" alt="Sample photo">
+    <div class="text">
+      <h3>Artificial Intelligence </h3>
+      <p>Artificial Intelligence is a branch of Computer Science that is used to provide thinking ability to machine or system</p>
+      <button>A.I</button>
+    </div>
+  </article>
+  <article class="card">
+    <img src="/Sample/MLimage.jpg" alt="Sample photo">
+    <div class="text">
+      <h3>Machine Learning</h3>
+      <p>Machine Learning is a branch of Arificial Intelligence that mainly focus on learning of machine by using datasets or data provided by user</p>
+      <button>M.L</button>
+    </div>
+  </article>
+  <article class="card">
+    <img src="/Sample/Nlpimage.jpg" alt="Sample photo">
+    <div class="text">
+      <h3>Natural Language Processing</h3>
+      <p>N.L.P is a branch of Artificial Intelligence that is used for understanding human language and vice verse</p>
+      <button>N.L.P</button>
+    </div>
+  </article>
+  <article class="card">
+    <img src="/Sample/DSimgae.jpg" alt="Sample photo">
+    <div class="text">
+      <h3>Data Science </h3>
+      <p>Data Science is branch of Artificial Intelligence that is used for processing raw data to get information from Data</p>
+      <button>D.S</button>
+    </div>
+  </article>
+  <article class="card">
+    <img src="/Sample/DeepLearning.jpg" alt="Sample photo">
+    <div class="text">
+      <h3>Deep Learning</h3>
+      <p>Deep Learning is branch of machine learning that use feed forward network for data processing</p>
+      <button>Stop here</button>
+    </div>
+  </article>
+</main>

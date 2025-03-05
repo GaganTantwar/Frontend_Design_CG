@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Photo Gallery Example Align Item Stretch</title>
+<style>
+  /* Container for image cards */
+  .cards {
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    align-items: stretch; /* Ensures all items stretch to the same height */
+  }
+
+  /* Styles for images inside the flex container */
+  .cards img {
+    margin: 10px; /* Adds space around each image */
+    border: 3px solid #000; /* Adds a black border around images */
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); /* Adds a subtle shadow effect */
+    max-width: 25vw; /* Limits image width to 25% of the viewport width */
+  }
+</style>
+
+<!-- Main container holding the images -->
+<main class="cards">
+  <!-- Sample images in the gallery -->
+  <img src="/Sample/image1.jpg" alt="Sample photo">
+  <img src="/Sample/image2.jpg" alt="Sample photo">
+  <img src="/Sample/image3.jpg" alt="Sample photo">
+  <img src="/Sample/image4.jpg" alt="Sample photo">
+  <img src="/Sample/image5.jpg" alt="Sample photo">
+  <img src="/Sample/image6.jpg" alt="Sample photo">
+</main>
